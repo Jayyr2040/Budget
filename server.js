@@ -25,6 +25,12 @@ app.get("/budget", (req, res) => {
     res.render("index.ejs",{Budget});
   });
 
+app.get("/budget/:id", (req, res) => {
+    const pos = req.params.id;
+    const budgt = Budget[pos];
+    res.render("show.ejs", { budgt });
+  });
+
 app.listen(PORT, () => {
     console.log("Running on port: ", PORT);
   });

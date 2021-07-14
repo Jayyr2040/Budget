@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head'); %>
+    <title>Budget</title>
+</head>
+<body>
+    <div class="container">
+        <h1><%= budgt.name %></h1>
+        <button><a href='http://localhost:3000/budget'>BACK</a></button>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Item</th>
+                <th>From</th>
+                <th>Amount ($)</th>
+                <th>Tags</th>
+            </tr>
+                        
+            <tr>
+                <td><%= budgt.date %></td>
+                <td><%= budgt.name %></td>
+                <td><%= budgt.from %></td>
+                <td><%= budgt.amount %></td>  
+                <td><%= budgt.tags %></td>     
+            </tr>
+                
+        </table>
+    </div>
+
+</body>
+</html>
