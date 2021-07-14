@@ -39,6 +39,7 @@ app.get("/budget/:id", (req, res) => {
 app.post("/budget", (req, res) => {
     if (typeof req.body.tags === 'string'){req.body.tags = req.body.tags.split(',')}
     if (req.body.isNegative === 'on'){req.body.amount = `-${req.body.amount}`}
+    req.body.tags.sort();
     Budget.push(req.body);
     res.redirect("/budget");
   });
