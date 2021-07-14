@@ -4,9 +4,9 @@
     <%- include('./partials/head'); %>
     <title>Budget</title>
 </head>
-<body>
+<body class="bod">
     <div class="container">
-        <h1><%= budgt.name %></h1>
+        <h1><%= bud.name %></h1>
         <button><a href='http://localhost:3000/budget'>BACK</a></button>
         <table>
             <tr>
@@ -18,11 +18,22 @@
             </tr>
                         
             <tr>
-                <td><%= budgt.date %></td>
-                <td><%= budgt.name %></td>
-                <td><%= budgt.from %></td>
-                <td><%= budgt.amount %></td>  
-                <td><%= budgt.tags %></td>     
+                <td><%= bud.date %></td>
+                <td><%= bud.name %></td>
+                <td><%= bud.from %></td>
+                <td><%= bud.amount %></td>  
+                <td>
+                    <ul><% bud.tags.map((item)=>
+                        {%>
+                            <li>
+                                <%= item %>
+                            </li>
+                        
+                        <%} 
+                    )
+                        %>
+                    </ul>
+                  </td>     
             </tr>
                 
         </table>

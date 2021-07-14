@@ -33,17 +33,16 @@ app.get("/budget/new", (req, res) => {
   
 app.get("/budget/:id", (req, res) => {
     const pos = req.params.id;
-    const budgt = Budget[pos];
-    res.render("show.ejs", { budgt });
+    res.render("show.ejs", { bud : Budget[pos] });
   });
 
 app.post("/budget", (req, res) => {
-    console.log(req.body);
+    if (typeof req.body.tags === 'string'){req.body.tags = req.body.tags.split(',')}
+    if (req.body.isNegative === 'on'){req.body.amount = `-${req.body.amount}`}
     Budget.push(req.body);
     res.redirect("/budget");
   });
   
-
 app.listen(PORT, () => {
     console.log("Running on port: ", PORT);
   });

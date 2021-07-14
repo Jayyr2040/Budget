@@ -4,13 +4,18 @@
     <%- include('./partials/head'); %>
     <title>Add New Item</title>
 </head>
-<body>
+<body class="bod">
     <div class="container">
         <h1>Add a new item</h1>
+        <button><a href='http://localhost:3000/budget'>BACK</a></button>
         <form action="/budget" method="POST">
             <input type="text" name="date" id="date" placeholder="Date" />
             <input type="text" name="name" id="name" placeholder="Name"  />
+            <br>
             <input type="number" name="amount" id="amount" placeholder="Amount"/>
+            <label for="isNegative">Expenditure</label>
+            <input type="checkbox" name="isNegative" id="isNegative" />
+            <br>
             <input type="text" name="from" id="from" placeholder="From" />
             <input type="text" name="tags" id="tags" placeholder="Tags"/>
             <input type="submit" value="Create item" />

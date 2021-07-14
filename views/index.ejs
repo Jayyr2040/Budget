@@ -6,14 +6,14 @@
 </head>
 <body>
     <div class="container">
-        <h1>Budgtr ALL</h1>
+        <h1>Budget Summary</h1>
         <button><a href='http://localhost:3000/budget/new'>NEW ITEM</a></button>
         <br>
         <% let bankAccount = Budget.reduce((accum, curr) =>accum + parseInt(curr.amount),0) %>
         <% if (bankAccount < 0) 
-            {%><p style="background-color: red;">BankAccount  Total: $<%= bankAccount %></p> <%} 
+            {%><span style="background-color: red;">BankAccount  Total: $<%= bankAccount %></span> <%} 
             else
-            {%> <p style="background-color: green;">BankAccount  Total: $<%= bankAccount %></p> <%} 
+            {%> <span style="background-color: green;">BankAccount  Total: $<%= bankAccount %></span> <%} 
         %> 
         <table>
             <tr>
