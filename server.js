@@ -19,17 +19,30 @@ const Budget = require("./models/budget");
 const app = express();
 const PORT = process.env.PORT;
 
+app.use(express.urlencoded({ extended: false })); 
+
 app.use(express.static('public'));
 
 app.get("/budget", (req, res) => {
     res.render("index.ejs",{Budget});
   });
 
+app.get("/budget/new", (req, res) => {
+    res.render("new.ejs");
+  });
+  
 app.get("/budget/:id", (req, res) => {
     const pos = req.params.id;
     const budgt = Budget[pos];
     res.render("show.ejs", { budgt });
   });
+
+app.post("/budget", (req, res) => {
+    console.log(req.body);
+    Budget.push(req.body);
+    res.redirect("/budget");
+  });
+  
 
 app.listen(PORT, () => {
     console.log("Running on port: ", PORT);
