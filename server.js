@@ -14,13 +14,15 @@ in server.js
 
 require("dotenv").config();
 const express = require("express");
-const budget = require("./budget");
+const Budget = require("./models/budget");
 
 const app = express();
 const PORT = process.env.PORT;
 
+app.use(express.static('public'));
+
 app.get("/budget", (req, res) => {
-    res.send(budget);
+    res.render("index.ejs");
   });
 
 app.listen(PORT, () => {
