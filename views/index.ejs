@@ -7,6 +7,25 @@
 <body>
     <div class="container">
         <h1>Budgtr ALL</h1>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Item</th>
+                <th>Amount ($)</th>
+              </tr>
+          
+                <% for (const [index,budgt] of Budget.entries()) 
+                    {%>
+                        <tr>
+                            <td><%= budgt.date %></td>
+                            <td> <a href='http://localhost:3000/budget/<%= index%>'><%= budgt.name %></a></td>
+                            <td><%= budgt.amount %></td>
+                        </tr>
+                    <%} 
+                %>
+              
+              
+        </table>
     </div>
 
 </body>

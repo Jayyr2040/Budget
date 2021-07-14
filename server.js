@@ -22,7 +22,7 @@ const PORT = process.env.PORT;
 app.use(express.static('public'));
 
 app.get("/budget", (req, res) => {
-    res.render("index.ejs");
+    res.render("index.ejs",{Budget});
   });
 
 app.listen(PORT, () => {
