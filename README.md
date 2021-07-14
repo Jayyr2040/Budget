@@ -20,15 +20,11 @@ Build an express app that let's you create, and read
 
 ## Getting Started
 
-1. All steps for the exercise should go in this section.
+1. Fork and clone this repository
 
-1. For example: Fork and clone this repository
+2. Initalize and install express, ejs etc. & whatever you think need.
 
-1. Include setup instructions such as, installing dependencies, or running a script like
-
-   ```bash
-   psql -f db/schema.sql
-   ```
+3. Create your server.js file and get started.
 
 ## Deliverables
 
@@ -45,12 +41,6 @@ You'll be creating an app that can let you
 ## Submission Guidelines
 
 - Must be submitted no later than the start of the next class
-
-## Getting Started/More Guidance
-
-
-## App Description
-
 
 ## Data
 You are provided a `budget.js` file with data for you to use to populate your index and show routes
@@ -82,7 +72,7 @@ We only have one model, so it may seem all these folders are overkill. As we sta
     - recommended to go to try a new css framework:<br>
      http://getskeleton.com/
     - download the `normalize.css` and `skeleton.css` files and add them to your public directory (or use the CDNs:
-    <br> `https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css` and `https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css` - thanks for the Tip Sam Whitleton!)
+    <br> `https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css` and `https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css` - thanks for the tip Sam Whitleton!)
     - link them in your ejs files:
     ```html
     <link rel="stylesheet" href="/normalize.css">
@@ -250,8 +240,6 @@ Feel free to choose what you want and if you want to implement something differe
 ---
 
 *Copyright 2018, General Assembly Space. Licensed under [CC-BY-NC-SA, 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)*
-
-# Budgtr
 <br>
 
 ---
